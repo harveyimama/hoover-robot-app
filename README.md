@@ -10,9 +10,9 @@
 
 - Pull code from the main branch 
 
-- go to src/main/resources/application.properties  to configure mongodb connection parameters aad the following 
- spring.data.mongodb.username=<your user>
- spring.data.mongodb.password=<your password>
+- go to src/main/resources/application.properties  to configure mongodb connection parameters add the following 
+   -spring.data.mongodb.username='<your user>'
+   -spring.data.mongodb.password='<your password>'
  
 - Run mvn clean install 
 
@@ -31,8 +31,7 @@
 
 run below using curl or use postman to make request 
 
-curl --location 'http://localhost:8080/v1/drive' --header 'Content-Type: application/json' \
---data '{
+curl --location 'http://localhost:8080/v1/drive' --header 'Content-Type: application/json' --data '{
   "roomSize" : [5, 5],
   "coords" : [1, 2],
   "patches" : [
